@@ -1,0 +1,69 @@
+{% if current_user.is_authenticated %}
+    {% extends "logged_layout.html" %}
+{%else%}
+    {% extends "layout.html" %}
+{% endif %}
+
+{{ url_for('templates', filename='booking.html') }}
+
+{% block title %} Booking {% endblock %}
+
+{% block body_content %}
+
+<link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+</head>
+<div class="text-center">
+
+<div class='form'>
+
+<main class="form-booking">
+  <form method="POST" action="{{ url_for('booking') }}">
+    <h1 class="h3 mb-3 fw-normal">Book an Activity</h1>
+
+    <div class="form-floating">
+         <br>
+            <dl>
+               <dd>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for message in messages %}
+                     <div class="{{ category }}" style="color:#F07167;"> {{ message }}</div>
+                   {% endfor %}
+                    {% endif %}
+                   {% endwith %}
+                    <div class="form-row">
+                        <div class="centre">
+                            {{ form.date.label }} {{ form.date }}
+                            <br>
+                        </div>
+                    </div>
+                   <br>
+                    <div class="form-row">
+                    <div class="centre">
+                            {{ form.activity_type.label }} {{ form.activity_type }}
+                            <br>
+                        </div>
+                    </div>
+                   <br>
+                  <div class="form-row">
+                    <div class="centre">
+                            {{ form.timeslot.label }} {{ form.timeslot }}
+                            <br>
+                    </div>
+                </dd>
+            </dl>
+
+            {{ form.submit(class="btn btn-primary") }}
+
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Having difficulty booking? <a class="ml-2" href="{{ url_for('contact') }}">Contact Us</a>
+        </small>
+    </div>
+
+    </div>
+  </form>
+</main>
+</div>
+
+{% endblock %}

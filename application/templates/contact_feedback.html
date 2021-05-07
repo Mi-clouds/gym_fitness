@@ -1,0 +1,34 @@
+{% if current_user.is_authenticated %}
+    {% extends "logged_layout.html" %}
+{%else%}
+    {% extends "layout.html" %}
+{% endif %}
+
+{{ url_for('templates', filename='contact_feedback.html') }}
+
+{% block title %}My Contact{% endblock %}
+
+{% block body_content %}
+
+<div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+
+
+            <p>Thank you <strong>{{ comment.name }} </strong> for getting in touch.</p>
+
+                   <p>Here is a copy of your message: <br>
+                       <strong>{{ comment.subject }} - </strong>
+                       <i>{{ comment.question }} </i> </p>
+
+
+                    <p>We aim to respond to all enquiries within 48 hrs.</p>
+
+            <p>For urgent concerns, please contact the centre Manager directly.</p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

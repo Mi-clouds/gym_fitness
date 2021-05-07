@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+body{background-color:rgba(0, 136, 169, 0.5);
+font-family: 'Montserrat', sans-serif;
+
+}
+/*body end*/
+
+/*headings starts*/
+h1,h2,h3,h4,h5{
+font-weight:700;
+color:#fff;
+
+}
+
+/*headings end*/
+
+
+/*navbar toggler start*/
+.navbar-toggler{background-color: rgba(0, 136, 169, 1);
+border:none;
+padding:10px 6px;
+outline:none;}
+
+.navbar-toggler:hover{
+background-color: rgba(0, 136, 169, 0.8);
+}
+
+.navbar-toggler span{
+    display:block;
+    width:18px;
+    margin-left: 10px;
+    margin-right:10px;
+    height:2px;
+    border:1px;
+    background:#fff;
+}
+
+.navbar-toggler span + span{
+    margin-top:4px;
+    width:18px;
+    margin-left:10px;
+    margin-right:10px;
+
+}
+
+.navbar-toggler span + span + span{
+
+    width:18px;
+    margin-left:10px;
+    margin-right:10px
+
+}
+
+/*navbar toggler end*/
+
+/*login button start*/
+.btn{
+margin-left: 20px;
+padding: 9px 25px;
+background-color: rgba(0, 136, 169, 1);
+border: none;
+border-radius: 50px;
+cursor:pointer;
+transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+background-color: rgba(0, 136, 169, 0.8);
+padding:15px 30px;
+color:#fff;
+
+}
+
+/*login button end*/
+
+/*navbar and links start*/
+.navbar{
+background-color: #24252A};
+
+
+.navbar-toggler span + span + span{
+
+    width:18px;
+    margin-left:10px;
+    margin-right:10px
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    font-weight:700;
+    font-size:16px;
+    position:relative;
+    color:#ECF0F1;
+    text-decoration: none;
+    border:none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    border-top: 2px solid rgba(0, 136, 169, 0.8);
+    color:#ECF0F1;
+    font-size: 20px;
+}
+.navbar-expand-lg .navbar-nav .nav-link:active{
+    border-top:2px solid rgba(0, 136, 169, 0.8);
+   color:rgba(0, 136, 169, 0.8);
+   font-size:20px;
+}
+
+.navbar .navbar-brand{
+text-decoration:none;
+color:rgba(0, 136, 169, 1);
+font-size:24px;
+font-weight:800;
+font-family: 'Poppins', sans-serif;
+}
+
+.navbar .navbar-brand:hover{
+color:#fff;
+}
+
+.nav-item{margin-right: 20px;}
+
+/*navbar and links end*/
+/*footer start*/
+/*footer start*/
+
+
+.footer{max-height:70px;}
+
+.footer-item,.social-items{
+list-style:none;
+display:inline-block;
+
+}
+
+.footer li a{
+text-decoration:none;
+color:#fff;
+margin-left:20px;
+margin-right:20px;
+font-weight:700;
+
+}
+
+.footer li a:hover{
+color:rgba(0, 136, 169, 1);
+
+}
+
+.outer-footer{
+display:flex;
+padding: 10px;
+text-align: center;
+font-size: 12px;
+color:#fff;
+font-weight:700;
+}
+
+/*footer end*/
+
+/*delete account and reset password forms start*/
+label {
+    display: text-center;
+}
+
+.form-container {
+margin: auto;
+  width: 60%;
+  border: 3px outset;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  text-align: center;
+  align-items: center;
+
+}
+
+/*delete account and reset password forms end*/
+
+
+/*carousel start*/
+
+.carousel-inner carousel-item{
+height:70vh;
+
+background-size:cover;
+}
+/*carousel end*/
+
+
+
+/*facilities*/
+
+.box-two{
+    background-image: url("images/swimming.jpg");
+}
+.box-three{
+    background-image: url("images/gymeqpui.jpg");
+}
+.box-four{
+    background-image: url("images/yogaclass.jpg");
+}
+.box-five{
+    background-image: url("images/sauna.jpg");
+}
+
+.reveal-text-on-image {
+  width: 300px;
+  height: 300px;
+  margin: 10px 10px 10px 10px;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10%;
+  border: 1px transparent;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,0.5);
+}
+
+.reveal-text-on-image:before,
+.reveal-text-on-image:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: inherit;
+  transition: 0.3s;
+}
+
+.reveal-text-on-image:after {
+  background:rgba(0, 136, 169, 0.9);
+  transform: translateY(100%);
+  content: attr(data-text);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color:#fff;
+}
+
+.reveal-text-on-image:hover:before {
+  transform: translateY(-50%);
+}
+
+.reveal-text-on-image.slide-down:after {
+  transform: translateY(-100%);
+}
+.reveal-text-on-image.slide-down:hover:before {
+  transform: translateY(50%);
+}
+
+.reveal-text-on-image.slide-left:after {
+  transform: translate(100%, 0);
+}
+.reveal-text-on-image.slide-left:hover:before {
+  transform: translate(-50%, 0);
+}
+
+.reveal-text-on-image.slide-right:after {
+  transform: translate(-100%, 0);
+}
+.reveal-text-on-image.slide-right:hover:before {
+  transform: translate(50%, 0);
+}
+
+.reveal-text-on-image:hover:after {
+  transform: translateY(0);
+  box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.5);
+}
+#LOGIN/REG CSS
+/*
+html, body {
+  height: 100%;
+}
+
+body {
+
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+}*/
+
+.form-signin {
+  width: 50%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+
+}
+
+/* .w-20 btn btn-lg btn-primary {
+color: rgb(0,129,167);
+height: 20px;
+}
+*/
+
+label {
+    display: text-center;
+    font-weight: 600;
+    text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: pre;
+}
+
+.form-container {
+margin: auto;
+  width: 60%;
+  border: 3px outset;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  text-align: left;
+  align-items: center;
+  background-color:#CAF0F8;
+
+}
+
+/* a{color:#000;
+font-size:14px;
+font-weight:600;}
+*/
+
+.h3 mb-3 fw-normal{
+  text-align: center;
+
+}
+
+.form-check-label {
+text-align: center;
+}
+
+
+
+

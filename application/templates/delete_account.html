@@ -1,0 +1,64 @@
+{% if current_user.is_authenticated %}
+    {% extends "logged_layout.html" %}
+{%else%}
+    {% extends "layout.html" %}
+{% endif %}
+
+{{ url_for('templates', filename='delete_account.html') }}
+
+{% block title %}Delete Account {% endblock %}
+
+{% block body_content %}
+
+<body style="background-color:rgb(202, 240, 248);">
+<div class="container reset-body-container height">
+    <div class="container reset-container vh-10 mb-5">
+
+        <form method="POST" action="{{ url_for('delete_account') }}">
+         <div class="row mb-3 mt-3">
+             <div class="col-md-8 ">
+                {{ form.password.label}} {{ form.password(class="reset-label") }}
+                <div class="valid-feedback">
+                Looks good!
+                </div>
+
+             </div>
+          </div>
+
+            <div class="row mb-3 mt-3 ">
+             <div class="col-md-8 mb-3">
+                 {{ form.confirm_password.label }} {{ form.confirm_password(class="reset-label")}}
+                 <div class="valid-feedback">
+                     Looks good!
+                 </div>
+               </div>
+            </div>
+
+         <div class="row form-group">
+    <div class="col-md-8 mb-3 form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        <a href = "{{ url_for ('policy') }}"> Agree to deleting your account</a>
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+
+        <div class="row mb-3 mt-3 ">
+        <div class="col-md-8 mb-3">
+             {{ form.submit(class="btn btn-primary") }}
+         </div>
+        </div>
+
+
+        </form>
+
+
+    </div>
+</div>
+
+
+</body>
+{% endblock %}
